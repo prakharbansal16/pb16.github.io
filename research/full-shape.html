@@ -1,63 +1,91 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Tensions</title>
+		<title>Full Shape Analysis | Prakhar Bansal</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JR5NEH6G93"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-JR5NEH6G93');
+		</script>
+		<script>
+			window.MathJax = {
+			  tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']],
+				displayMath: [['$$', '$$'], ['\\[', '\\]']]
+			  }
+			};
+		</script>
+		<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header id="header">
+			<a href="../index.html" class="title">Prakhar Bansal</a>
+			<nav>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../index.html#two">Research</a></li>
+				</ul>
+			</nav>
+		</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Full Shape Analysis</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
+		<div id="wrapper">
+			<section id="main" class="wrapper">
 				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+					<h1 class="major">Full Shape Analysis</h1>
+					<span class="image fit"><img src="../images/full_shape.png" alt="Full shape power spectrum" /></span>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+					<p class="research-section-heading">Background</p>
+					<p>
+					When we map the distribution of galaxies in the universe, the most natural statistical summary is the <strong>power spectrum</strong> $P(k)$ — the amplitude of clustering as a function of spatial scale $k$. The sharpest cosmological signal in $P(k)$ is the BAO peak, and most analyses focus exclusively on measuring that peak's position as a standard ruler. But there is a lot more information in the full shape of the power spectrum — in the overall slope, the precise positions of oscillations, and the amplitude of clustering on different scales — that most analyses simply leave unused.
+					</p>
+					<p>
+					"Full shape" analysis aims to extract all of this information simultaneously. The challenge is theoretical: on small scales, galaxies are biased tracers of the underlying dark matter, and gravitational nonlinearities as well as galaxy bias effects must be modelled carefully. The modern framework for doing this is <strong>Effective Field Theory (EFT) of Large Scale Structure</strong>, which treats the small-scale physics as perturbative corrections parametrised by a few "nuisance" parameters. This allows tight constraints on the cosmological parameters $\Omega_m$, $H_0$, and $\sigma_8$ from a single dataset.
+					</p>
+					<p>
+					Going further, the <strong>bispectrum</strong> $B(k_1, k_2, k_3)$ is the three-point clustering statistic — it captures correlations between galaxy triplets that the power spectrum is blind to. The bispectrum contains significant additional information, especially for breaking degeneracies (such as between the linear growth rate $f$ and the clustering amplitude $\sigma_8$) that limit two-point analyses.
+					</p>
+
+					<p class="research-section-heading">My Work</p>
+					<p>
+					I developed <strong>FolpsD</strong>, a pipeline for performing joint Power Spectrum and Bispectrum fits on DESI galaxy clustering data. FolpsD extends the EFT galaxy power spectrum (from the FOLPS code) with a tree-level bispectrum projected onto the tripolar spherical harmonic basis, enabling a simultaneous fit to both two- and three-point statistics in a single likelihood.
+					</p>
+					<p>
+					A key innovation is the inclusion of a <strong>line-of-sight damping factor</strong> in both statistics — a phenomenological correction that models the suppression of clustering at small scales due to non-linear redshift-space effects. This extends the range of scales that can be reliably used in the fit, recovering more information without sacrificing model accuracy. Even without damping, the joint $P(k) + B$ analysis significantly improves cosmological constraints and breaks degeneracies (e.g. between $f$ and $\sigma_8$) compared to power-spectrum-only fits. The pipeline was tested and validated on DESI DR2 galaxy mocks.
+					</p>
+
+					<div class="paper-cite">
+						<div class="paper-label">Paper</div>
+						<div class="paper-title">FolpsD: combining EFT and phenomenological approaches for joint power spectrum and bispectrum analyses</div>
+						<div class="paper-authors">Prakhar Bansal, A. Aviles, H. E. Noriega, C. Guandalin et al. (2026)</div>
+						<div class="paper-arxiv"><a href="https://arxiv.org/abs/2604.08895" target="_blank" rel="noopener">arXiv:2604.08895</a></div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Prakhar Bansal. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

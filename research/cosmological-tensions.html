@@ -1,87 +1,92 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Tensions</title>
+		<title>Cosmological Tensions | Prakhar Bansal</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-
-        <script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JR5NEH6G93"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-JR5NEH6G93');
+		</script>
+		<script>
 			window.MathJax = {
 			  tex: {
 				inlineMath: [['$', '$'], ['\\(', '\\)']],
 				displayMath: [['$$', '$$'], ['\\[', '\\]']]
 			  }
 			};
-			</script>
-			
-			<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		</script>
+		<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header id="header">
+			<a href="../index.html" class="title">Prakhar Bansal</a>
+			<nav>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../index.html#two">Research</a></li>
+				</ul>
+			</nav>
+		</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Cosmological Tensions</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>
-                            Cosmology as a field has reached an interesting stage in history, where the quality of data and our analysis methods are becoming better and better day by day. Each new survey helps us answer some of the previously unknow things about the Universe (or atleast that's what we expect). Unfortunately,
-                            things have not been that straightforward in the brief history of Cosmology. Starting with the Hubble Tension, which has been around for atleast 10 years now, is the issue of the current expansion rate (parametrised by Hubble constant $H_0$)
-                            having different values when measured through two independent techniques. As both techniques are got better in a decade, the errorbars on both the measurement values kept getting shorter and shorter. So much so that the
-                            value of $H_0$ from the two techniques are now $\sim$ 7 $\sigma$ apart. 
-                            </p>
-                            <p>
-                                The latest addition to this list of "Crises in Cosmology" has been the
-                                growing evidence for time-varying dark energy. The current best model of
-                                Dark Energy (the mysterious component of the Universe which is repsonsible for its accelerating expansion) goes by the name $\Lambda$CDM. 
-                                In this model the energy density of the dark energy component ($\Lambda$) remains constant in time. So far this model has worked remarkably well and has been
-                                able to successfully explain most of our observations in the past two decades.
-                                But the latest set of data releases in 2024 and 2025 from the Dark Energy Spectroscopic Instrument (DESI) Collaboration, have shown some hints of departure from this $\Lambda$CDM model and indeed show some evidence in favour of a time-varying Dark Energy, when combined with external data,
-                                If confirmed, this would one of the biggest discoveries in Cosmology, since the discovery of Dark Energy in 1998.
-                                This has sparked a lot of interest in the community, with a lot of discussion around what could cause this departure from $\Lambda$CDM.
-                            </p>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt-1">
+		<div id="wrapper">
+			<section id="main" class="wrapper">
 				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+					<h1 class="major">Cosmological Tensions</h1>
+					<span class="image fit"><img src="../images/tensions.png" alt="Cosmological tensions plot" /></span>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+					<p class="research-section-heading">Background</p>
+					<p>
+					Cosmology is in an unusual situation: our standard model, $\Lambda$CDM, fits the data remarkably well — and yet, as measurements have become more precise, cracks have started to appear. These "tensions" are disagreements between independent measurements of the same quantity that are too large to be explained by random statistical fluctuations alone.
+					</p>
+					<p>
+					The most famous is the <strong>Hubble tension</strong>. The Hubble constant $H_0$ tells us how fast the universe is expanding today. We can infer it from the very early universe (using the Cosmic Microwave Background, or CMB) or measure it directly in the local universe using a chain of distance indicators — Cepheid variable stars, Type Ia supernovae, and others. The problem is that these two methods give values of $H_0$ that are now discrepant at the $\sim 5\text{–}7\sigma$ level. As both measurements have become more precise over the past decade, the tension has only grown more stubborn, ruling out simple statistical flukes.
+					</p>
+					<p>
+					A newer and arguably more dramatic tension involves <strong>dark energy</strong>. In the standard $\Lambda$CDM model, dark energy is a cosmological constant $\Lambda$ — its energy density does not change with time, and it drives the accelerating expansion of the universe. But data from the Dark Energy Spectroscopic Instrument (DESI), combined with CMB and Type Ia supernova measurements, have shown growing evidence that this may not be the case. The data hint at dark energy that <em>evolves</em> with time — a so-called dynamical dark energy (DDE) model. If this holds up, it would be one of the most significant discoveries in physics since the original detection of cosmic acceleration in 1998.
+					</p>
+
+					<p class="research-section-heading">My Work</p>
+					<p>
+					The key question I worked on is: <em>what specific features in the data are driving this preference for dynamical dark energy?</em> Rather than simply fitting a DDE model and quoting a significance, we tried to isolate which redshift range and which dataset combinations are responsible for the signal.
+					</p>
+					<p>
+					Working with my advisor Dragan Huterer, I adopted a flexible parameterisation of the expansion history — allowing the expansion rate $H(z)$ to vary freely in redshift bins, rather than assuming a specific dark energy equation of state. This makes it possible to "read off" where the data deviates from $\Lambda$CDM, without pre-assuming the shape of the deviation. We found a consistent preference across datasets for a <strong>3–4% increase in the expansion rate at $z \approx 0.7$</strong> relative to the $\Lambda$CDM prediction. This is the redshift where DESI's LRG (Luminous Red Galaxy) sample has the most constraining power, and it is the primary driver of the DDE preference. A key part of this work was developing a simple but accurate compression of the CMB likelihood that allowed us to efficiently combine CMB information with DESI BAO data (see also the <a href="cmb-compression.html">CMB Compression</a> page).
+					</p>
+
+					<div class="paper-cite">
+						<div class="paper-label">Paper</div>
+						<div class="paper-title">Expansion-history preferences of DESI DR2 and external data</div>
+						<div class="paper-authors">Prakhar Bansal &amp; Dragan Huterer (2025)</div>
+						<div class="paper-journal">Physical Review D 112, 023528</div>
+						<div class="paper-arxiv"><a href="https://arxiv.org/abs/2502.07185" target="_blank" rel="noopener">arXiv:2502.07185</a></div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Prakhar Bansal. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

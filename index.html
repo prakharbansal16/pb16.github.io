@@ -6,12 +6,20 @@
 -->
 <html>
 	<head>
-		<title>Hyperspace by HTML5 UP</title>
+		<title>Prakhar Bansal | Cosmologist</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔭</text></svg>">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JR5NEH6G93"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-JR5NEH6G93');
+		</script>
 
 		<script>
 			window.MathJax = {
@@ -32,8 +40,7 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">About Me</a></li>
-							<!-- <li><a href="#one">About Me</a></li> -->
-
+							<li><a href="#news">Updates</a></li>
 							<li><a href="#two">Research</a></li>
 							<li><a href="#four">CV & Publications</a></li>
 							<li><a href="#five">Talks</a></li>
@@ -59,10 +66,13 @@
 							Physics PhD at the University of Michigan<br>
 							Member: DESI Collaboration
 						  </p>
-						  <!-- <p class="description">
-							Investigating large-scale structure, dark matter distribution,
-							and the geometry of the Universe.
-						  </p> -->
+						  <div class="intro-social">
+							<a href="https://github.com/prakharbansal16" target="_blank" rel="noopener" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a>
+							<a href="https://www.linkedin.com/in/prakhar-bansal-699619202" target="_blank" rel="noopener" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a>
+							<a href="https://inspirehep.net/authors/2911021?ui-citation-summary=true" target="_blank" rel="noopener" class="icon solid fa-atom" title="Inspire HEP"><span class="label">Inspire HEP</span></a>
+							<a href="https://scholar.google.com/citations?user=3CpIoVIAAAAJ&hl=en" target="_blank" rel="noopener" class="icon solid fa-graduation-cap" title="Google Scholar"><span class="label">Google Scholar</span></a>
+							<a href="https://orcid.org/0009-0000-7309-4341" target="_blank" rel="noopener" class="icon solid fa-id-badge" title="ORCID"><span class="label">ORCID</span></a>
+						  </div>
 						</div>
 				  
 						
@@ -124,6 +134,35 @@
 						</section>-->
 					</section> 
 
+				<!-- News -->
+					<section id="news" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Recent Updates</h2>
+							<ul class="news-list">
+								<li>
+									<span class="news-date">May 2026</span>
+									<span>New paper: <a href="https://arxiv.org/abs/2605.00991" target="_blank" rel="noopener">Implications of SARAS3 data for Coulomb-like interacting dark matter</a></span>
+								</li>
+								<li>
+									<span class="news-date">Apr 2026</span>
+									<span>New paper: <a href="https://arxiv.org/abs/2604.08895" target="_blank" rel="noopener">FolpsD: combining EFT and phenomenological approaches for joint power spectrum and bispectrum analyses</a></span>
+								</li>
+								<li>
+									<span class="news-date">Oct 2025</span>
+									<span>Talk at <a href="./presentations/COSMO-25.pdf" target="_blank" rel="noopener">COSMO-25</a> — Constraining Late-Time Cosmology with DESI DR2</span>
+								</li>
+								<li>
+									<span class="news-date">Sep 2025</span>
+									<span>Passed PhD Preliminary Exam at the University of Michigan</span>
+								</li>
+								<li>
+									<span class="news-date">Jun 2025</span>
+									<span>Paper published in <em>Phys. Rev. D</em>: <a href="https://arxiv.org/abs/2502.07185" target="_blank" rel="noopener">Expansion-history preferences of DESI DR2 and external data</a></span>
+								</li>
+							</ul>
+						</div>
+					</section>
+
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
@@ -172,7 +211,7 @@
 							</section>
 
 							<section class="research-tile full_shape">
-								<a href="research/cosmological-tensions.html">
+								<a href="research/full-shape.html">
 								  <h3>Full Shape Analysis</h3>
 								  <p>Developed a pipeline to perform joint Power Spectrum and Bispectrum fits using the clustering data, combining EFT and phenomenological approaches to model the 
 									los small scales better to derive tighter parameter constraints. Click to know more!
@@ -181,21 +220,21 @@
 							</section>
 
 							<section class="research-tile bao">
-								<a href="research/full-shape.html">
+								<a href="research/bao.html">
 								  <h3>Baryon Accoustic Oscillations</h3>
 								  <p>Performed the validation checks by including hexadecapole (P4) measurements in the fits for DESI DR2 BAO key paper</p>
 								</a>
 							</section>
 
 							<section class="research-tile gravity">
-								<a href="research/cosmological-tensions.html">
+								<a href="research/modified-gravity.html">
 								  <h3>Modified Gravity</h3>
 								  <p>Contributing to the pipeline development for DESI DR2 Modified Gravity analysis. Click to know more!</p>
 								</a>
 							</section>
 
 							<section class="research-tile cmb">
-								<a href="research/cosmological-tensions.html">
+								<a href="research/cmb-compression.html">
 								  <h3>CMB Compression</h3>
 								  <p>Worked on an optimal compression of the computation heavy CMB likelihood into a few parameters suitable for Dark Energy constraints. Click to know more!</p>
 								</a>
@@ -203,7 +242,7 @@
 							</section>
 
 							<section class="research-tile cm21">
-								<a href="research/cosmological-tensions.html">
+								<a href="research/21cm.html">
 								  <h3>21 cm Cosmology</h3>
 								  <p>Derived constraints on Coulomb-like DM interaction using the <i>SARAS3</i> global 21cm data</p>
 								</a>
@@ -272,39 +311,37 @@
 
 									<ul class="talk-list">
 
-									
 										<li class="talk">
 										  <div class="talk-title">
 											<a href="./presentations/FolpsD.pdf" target="_blank" rel="noopener">Full Shape with FolpsD</a>
 										  </div>
 										  <div class="talk-meta">
-											DESI Winter Collaboration Meeting • December 2025
+											DESI Winter Collaboration Meeting &bull; December 2025
 										  </div>
 										</li>
 
 										<li class="talk">
 											<div class="talk-title">
-											  <a href="./presentations/COSMO-25.pdf"  target="_blank" rel="noopener">Constraining Late-Time Cosmology with DESI DR2</a>
+											  <a href="./presentations/COSMO-25.pdf" target="_blank" rel="noopener">Constraining Late-Time Cosmology with DESI DR2</a>
 											</div>
 											<div class="talk-meta">
-											  COSMO-25 • October 2025
+											  COSMO-25 &bull; October 2025
 											</div>
-										  </li>
+										</li>
 
-										  <li class="talk">
+										<li class="talk">
 											<div class="talk-title">
-											  <a href="./presentations/Prelim_Talk.pdf"  target="_blank" rel="noopener">Constraining Late-Time Cosmology with DESI DR2</a>
+											  <a href="./presentations/Prelim_Talk.pdf" target="_blank" rel="noopener">Constraining Late-Time Cosmology with DESI DR2</a>
 											</div>
 											<div class="talk-meta">
-											  : PhD Prelim Talk, University of Michigan • September 2025
+											  PhD Prelim Talk, University of Michigan &bull; September 2025
 											</div>
-										  </li>
-									
-									  
-									  </ul>
-									<!-- <ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul> -->
+										</li>
+
+									</ul>
+									<ul class="actions">
+										<li><a href="talks.html" class="button">View all talks</a></li>
+									</ul>
 								</div>
 							</div>
 						</section>
@@ -319,23 +356,23 @@
 							<p>If you found my work interesting and want to discuss further or have any questions, feel free to put them here. I'm usually much more active on slack, so feel free to hit me up on slack if we are in a common channel. Else, this form would also work, I'll try to answer within a week (No promises though :)) </p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form method="POST" action="https://formspree.io/f/xnjebrjn">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
+												<input type="text" name="name" id="name" required />
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<input type="email" name="email" id="email" required />
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
+												<textarea name="message" id="message" rows="5" required></textarea>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
+											<li><button type="submit" class="button primary">Send Message</button></li>
 										</ul>
 									</form>
 								</section>
@@ -349,7 +386,7 @@
 										</li>
 										<li>
 											<h3>Email</h3>
-											<a href="#">prakharb@umich.edu</a>
+											<a href="mailto:prakharb@umich.edu">prakharb@umich.edu</a>
 										</li>
 										<!-- <li>
 											<h3>Phone</h3>
@@ -358,11 +395,11 @@
 										<li>
 											<h3>Social</h3>
 											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://github.com/prakharbansal16" target="_blank" rel="noopener" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://www.linkedin.com/in/prakhar-bansal-699619202" target="_blank" rel="noopener" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://inspirehep.net/authors/2911021?ui-citation-summary=true" target="_blank" rel="noopener" class="icon solid fa-atom"><span class="label">Inspire HEP</span></a></li>
+												<li><a href="https://scholar.google.com/citations?user=3CpIoVIAAAAJ&hl=en" target="_blank" rel="noopener" class="icon solid fa-graduation-cap"><span class="label">Google Scholar</span></a></li>
+												<li><a href="https://orcid.org/0009-0000-7309-4341" target="_blank" rel="noopener" class="icon solid fa-id-badge"><span class="label">ORCID</span></a></li>
 											</ul>
 										</li>
 									</ul>

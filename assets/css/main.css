@@ -4006,7 +4006,10 @@ input, select, textarea {
 #intro p,
 #intro a {
     color: #ffffff !important;
-	font-size: 2.5em
+}
+
+#intro h1 {
+	font-size: 2.5em;
 }
 
 /* Remove any text glow completely */
@@ -4180,7 +4183,7 @@ input, select, textarea {
 .features {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.1em;
+    gap: 1.5em;
 }
 
 @media screen and (max-width: 900px) {
@@ -4193,7 +4196,7 @@ input, select, textarea {
 #two .features {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 0.1em;
+    gap: 1.5em;
 }
 
 #two .features section {
@@ -4337,4 +4340,135 @@ input, select, textarea {
 			}
 
 		}
-*/
+
+/* Research sub-page: paper citation block */
+.paper-cite {
+    border-left: 3px solid #3e6a94;
+    padding: 1em 1.5em;
+    margin: 2.5em 0 1em;
+    background: rgba(62, 106, 148, 0.08);
+    border-radius: 0 6px 6px 0;
+}
+
+.paper-cite .paper-label {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    margin-bottom: 0.4em;
+}
+
+.paper-cite .paper-title {
+    font-weight: 600;
+    margin-bottom: 0.3em;
+    font-size: 1em;
+}
+
+.paper-cite .paper-authors {
+    opacity: 0.75;
+    margin-bottom: 0.25em;
+    font-size: 0.9em;
+}
+
+.paper-cite .paper-journal {
+    font-size: 0.85em;
+    opacity: 0.6;
+    margin-bottom: 0.5em;
+}
+
+.paper-cite .paper-journal a,
+.paper-cite .paper-arxiv a {
+    color: #3e6a94;
+}
+
+.research-section-heading {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+}
+
+/* Intro hero: social icon strip */
+.intro-social {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 1.4em;
+    flex-wrap: wrap;
+}
+
+.intro-social a {
+    font-size: 14px;
+    opacity: 0.7;
+    color: inherit;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.intro-social a:hover {
+    opacity: 1;
+    color: inherit;
+    transform: translateY(-2px);
+}
+
+/* Recent Updates / News section */
+#news {
+    background: #f8f8f8;
+    color: #333;
+}
+
+#news h2 {
+    color: #3e6a94;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 750px;
+}
+
+.news-list li {
+    display: flex;
+    gap: 1.5em;
+    padding: 0.85em 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    align-items: baseline;
+    line-height: 1.5;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    min-width: 5.5em;
+    color: #3e6a94;
+    font-size: 0.82em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    padding-top: 0.15em;
+}
+
+.news-list a,
+.news-list a:visited {
+    color: #3e6a94;
+}
+
+/* Restore legible hover color on all light-background sections */
+.wrapper.style1 a:hover,
+.wrapper.style5 a:hover,
+.wrapper.style2.spotlights > section a:hover {
+    color: #2a5478 !important;
+}
+
+/* Research sub-page: breadcrumb nav spacing */
+#header nav ul li + li::before {
+    content: "/";
+    margin: 0 0.5em;
+    opacity: 0.4;
+}

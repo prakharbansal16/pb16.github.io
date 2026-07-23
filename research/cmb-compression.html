@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMB Compression | Prakhar Bansal</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JR5NEH6G93"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-JR5NEH6G93');
+		</script>
+		<script>
+			window.MathJax = {
+			  tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']],
+				displayMath: [['$$', '$$'], ['\\[', '\\]']]
+			  }
+			};
+		</script>
+		<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<header id="header">
+			<a href="../index.html" class="title">Prakhar Bansal</a>
+			<nav>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../index.html#two">Research</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="wrapper">
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<h1 class="major">CMB Compression</h1>
+					<span class="image fit"><img src="../images/Planck_CMB.jpg" alt="Planck CMB temperature anisotropy map" /></span>
+
+					<p class="research-section-heading">Background</p>
+					<p>
+					The Cosmic Microwave Background (CMB) is the oldest light we can observe — the afterglow of the hot plasma that filled the early universe, released when the universe was just 380,000 years old. Its temperature fluctuations across the sky encode an extraordinary amount of cosmological information: the geometry of the universe, the amount of dark matter and baryonic matter, the primordial power spectrum of density perturbations, and much more.
+					</p>
+					<p>
+					Modern CMB datasets such as those from the <em>Planck</em> satellite comprise thousands of data points in multipole space ($\ell \sim 2$ to $\sim 2500$), and the associated likelihood functions are expensive to evaluate. This is not a problem for standard $\Lambda$CDM analyses, where the full CMB likelihood is evaluated once per MCMC step. But it becomes a serious bottleneck when you want to explore a large number of phenomenological extensions — for example, testing how the CMB data constrains a free expansion history $H(z)$ across many redshift bins. In that case, each model evaluation involves calling the CMB likelihood potentially millions of times, making a brute-force approach computationally prohibitive.
+					</p>
+					<p>
+					The solution is to <strong>compress</strong> the CMB data: reduce the high-dimensional likelihood to a small set of derived quantities — "compressed statistics" — that capture nearly all the information relevant for the parameters of interest. The compressed likelihood is then cheap to evaluate, enabling fast, flexible joint analyses.
+					</p>
+
+					<p class="research-section-heading">My Work</p>
+					<p>
+					As part of my work on the expansion-history analysis with DESI DR2, I developed and validated a simple but accurate compression of the CMB likelihood that is tailored for dark energy constraints. The compression reduces the full Planck likelihood to just a few summary parameters, while preserving the information content relevant for $H(z)$ and the matter density $\Omega_m$. I validated that constraints on our phenomenological dark energy parameterisation are virtually identical when using the full CMB likelihood versus the compressed one, confirming that no significant information is lost.
+					</p>
+					<p>
+					This compressed likelihood was then used throughout our <a href="cosmological-tensions.html">expansion-history analysis</a>, enabling efficient joint fits to DESI BAO, CMB, and Type Ia supernova data. The approach is general and can straightforwardly be adapted for other phenomenological analyses that require fast CMB evaluations.
+					</p>
+
+					<div class="paper-cite">
+						<div class="paper-label">Paper</div>
+						<div class="paper-title">Expansion-history preferences of DESI DR2 and external data</div>
+						<div class="paper-authors">Prakhar Bansal &amp; Dragan Huterer (2025)</div>
+						<div class="paper-journal">Physical Review D 112, 023528</div>
+						<div class="paper-arxiv"><a href="https://arxiv.org/abs/2502.07185" target="_blank" rel="noopener">arXiv:2502.07185</a></div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Prakhar Bansal. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
