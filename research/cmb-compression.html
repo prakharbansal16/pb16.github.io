@@ -43,13 +43,13 @@
 
 					<p class="research-section-heading">Background</p>
 					<p>
-					The Cosmic Microwave Background (CMB) is the oldest light we can observe — the afterglow of the hot plasma that filled the early universe, released when the universe was just 380,000 years old. Its temperature fluctuations across the sky encode an extraordinary amount of cosmological information: the geometry of the universe, the amount of dark matter and baryonic matter, the primordial power spectrum of density perturbations, and much more.
+					The Cosmic Microwave Background (CMB) is the oldest light we can observe, the afterglow of the hot plasma that filled the early universe, released when the universe was just 380,000 years old. Its temperature fluctuations across the sky encode an extraordinary amount of cosmological information: the geometry of the universe, the amount of dark matter and baryonic matter, the primordial power spectrum of density perturbations, and much more.
 					</p>
 					<p>
-					Modern CMB datasets such as those from the <em>Planck</em> satellite comprise thousands of data points in multipole space ($\ell \sim 2$ to $\sim 2500$), and the associated likelihood functions are expensive to evaluate. This is not a problem for standard $\Lambda$CDM analyses, where the full CMB likelihood is evaluated once per MCMC step. But it becomes a serious bottleneck when you want to explore a large number of phenomenological extensions — for example, testing how the CMB data constrains a free expansion history $H(z)$ across many redshift bins. In that case, each model evaluation involves calling the CMB likelihood potentially millions of times, making a brute-force approach computationally prohibitive.
+					Modern CMB datasets such as those from the <em>Planck</em> satellite comprise thousands of data points in multipole space ($\ell \sim 2$ to $\sim 2500$), and the associated likelihood functions are both expensive to evaluate and notoriously involved to set up. Getting the full Planck likelihood running in a custom inference pipeline is a significant technical undertaking. For researchers exploring phenomenological extensions beyond $\Lambda$CDM — say, testing how the CMB constrains a free expansion history $H(z)$ across many redshift bins — this complexity becomes a real practical barrier, compounded by the fact that such analyses may require the likelihood to be evaluated millions of times across MCMC chains.
 					</p>
 					<p>
-					The solution is to <strong>compress</strong> the CMB data: reduce the high-dimensional likelihood to a small set of derived quantities — "compressed statistics" — that capture nearly all the information relevant for the parameters of interest. The compressed likelihood is then cheap to evaluate, enabling fast, flexible joint analyses.
+					The solution is to <strong>compress</strong> the CMB data: reduce the high-dimensional likelihood to a small set of derived summary statistics that capture nearly all the information relevant for the parameters of interest. The compressed likelihood is not only fast to evaluate but trivial to implement in any standard inference pipeline, making CMB constraints accessible without the overhead of the full likelihood machinery.
 					</p>
 
 					<p class="research-section-heading">My Work</p>
@@ -57,22 +57,33 @@
 					As part of my work on the expansion-history analysis with DESI DR2, I developed and validated a simple but accurate compression of the CMB likelihood that is tailored for dark energy constraints. The compression reduces the full Planck likelihood to just a few summary parameters, while preserving the information content relevant for $H(z)$ and the matter density $\Omega_m$. I validated that constraints on our phenomenological dark energy parameterisation are virtually identical when using the full CMB likelihood versus the compressed one, confirming that no significant information is lost.
 					</p>
 					<p>
-					This compressed likelihood was then used throughout our <a href="cosmological-tensions.html">expansion-history analysis</a>, enabling efficient joint fits to DESI BAO, CMB, and Type Ia supernova data. The approach is general and can straightforwardly be adapted for other phenomenological analyses that require fast CMB evaluations.
+					This compressed likelihood was then used throughout our <a href="cosmological-tensions.html">expansion-history analysis</a>, enabling efficient joint fits to DESI BAO, CMB, and Type Ia supernova data.
 					</p>
 
 					<div class="paper-cite">
 						<div class="paper-label">Paper</div>
 						<div class="paper-title">Expansion-history preferences of DESI DR2 and external data</div>
 						<div class="paper-authors">Prakhar Bansal &amp; Dragan Huterer (2025)</div>
-						<div class="paper-journal">Physical Review D 112, 023528</div>
+						<div class="paper-journal"><a href="https://journals.aps.org/prd/abstract/10.1103/zypq-s6nl" target="_blank" rel="noopener">Physical Review D 112, 023528</a></div>
 						<div class="paper-arxiv"><a href="https://arxiv.org/abs/2502.07185" target="_blank" rel="noopener">arXiv:2502.07185</a></div>
+					</div>
+
+					<p style="margin-top: 2em;">
+					In a follow-up project with undergraduate student Amogh Srivastav, we turned this into a fully public tool called <strong>CMBComp</strong>. It provides five compressed likelihood variants covering dark energy, spatial curvature, and massive neutrinos, each fast to evaluate and trivial to drop into any standard inference pipeline. The goal was to make CMB constraints genuinely accessible: if you want to include Planck data in your analysis without wrestling with the full likelihood machinery, CMBComp is designed to just work.
+					</p>
+
+					<div class="paper-cite">
+						<div class="paper-label">Paper</div>
+						<div class="paper-title">CMBComp: A Simple and Accurate Compressed CMB Likelihood for Dark Energy, Curvature, and Massive Neutrinos</div>
+						<div class="paper-authors">Amogh Srivastav, Prakhar Bansal &amp; Dragan Huterer (2026)</div>
+						<div class="paper-arxiv"><a href="https://arxiv.org/abs/2606.18455" target="_blank" rel="noopener">arXiv:2606.18455</a></div>
 					</div>
 
 				</div>
 			</section>
 		</div>
 
-		<footer id="footer" class="wrapper alt">
+		<footer id="footer" class="wrapper style1-alt">
 			<div class="inner">
 				<ul class="menu">
 					<li>&copy; Prakhar Bansal. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>

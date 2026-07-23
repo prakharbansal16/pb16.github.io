@@ -43,21 +43,21 @@
 
 					<p class="research-section-heading">Background</p>
 					<p>
-					When we map the distribution of galaxies in the universe, the most natural statistical summary is the <strong>power spectrum</strong> $P(k)$ — the amplitude of clustering as a function of spatial scale $k$. The sharpest cosmological signal in $P(k)$ is the BAO peak, and most analyses focus exclusively on measuring that peak's position as a standard ruler. But there is a lot more information in the full shape of the power spectrum — in the overall slope, the precise positions of oscillations, and the amplitude of clustering on different scales — that most analyses simply leave unused.
+					When we map the distribution of galaxies in the universe, the most natural statistical summary is the <strong>power spectrum</strong> $P(k)$, which measures the amplitude of clustering as a function of spatial scale $k$. The sharpest cosmological signal in $P(k)$ is the BAO peak, and most analyses focus exclusively on measuring that peak's position as a standard ruler. But there is a lot more information in the full shape of the power spectrum (in the overall slope, the precise positions of oscillations, and the amplitude of clustering on different scales) that most analyses simply leave unused.
 					</p>
 					<p>
 					"Full shape" analysis aims to extract all of this information simultaneously. The challenge is theoretical: on small scales, galaxies are biased tracers of the underlying dark matter, and gravitational nonlinearities as well as galaxy bias effects must be modelled carefully. The modern framework for doing this is <strong>Effective Field Theory (EFT) of Large Scale Structure</strong>, which treats the small-scale physics as perturbative corrections parametrised by a few "nuisance" parameters. This allows tight constraints on the cosmological parameters $\Omega_m$, $H_0$, and $\sigma_8$ from a single dataset.
 					</p>
 					<p>
-					Going further, the <strong>bispectrum</strong> $B(k_1, k_2, k_3)$ is the three-point clustering statistic — it captures correlations between galaxy triplets that the power spectrum is blind to. The bispectrum contains significant additional information, especially for breaking degeneracies (such as between the linear growth rate $f$ and the clustering amplitude $\sigma_8$) that limit two-point analyses.
+					Going further, the <strong>bispectrum</strong> $B(k_1, k_2, k_3)$ is the three-point clustering statistic, capturing correlations between galaxy triplets that the power spectrum is blind to. The bispectrum contains significant additional information, especially for breaking degeneracies (such as between the linear growth rate $f$ and the clustering amplitude $\sigma_8$) that limit two-point analyses.
 					</p>
 
 					<p class="research-section-heading">My Work</p>
 					<p>
-					I developed <strong>FolpsD</strong>, a pipeline for performing joint Power Spectrum and Bispectrum fits on DESI galaxy clustering data. FolpsD extends the EFT galaxy power spectrum (from the FOLPS code) with a tree-level bispectrum projected onto the tripolar spherical harmonic basis, enabling a simultaneous fit to both two- and three-point statistics in a single likelihood.
+					I co-developed <strong>FolpsD</strong> with Alejandro Aviles and Hernan Noriega. The pipeline performs joint Power Spectrum and Bispectrum fits on galaxy clustering data and is implemented in desilike, DESI's cosmological inference framework. FolpsD extends the EFT galaxy power spectrum (from the FOLPS code) with a tree-level bispectrum projected onto the tripolar spherical harmonic basis, enabling a simultaneous fit to both two- and three-point statistics in a single likelihood.
 					</p>
 					<p>
-					A key innovation is the inclusion of a <strong>line-of-sight damping factor</strong> in both statistics — a phenomenological correction that models the suppression of clustering at small scales due to non-linear redshift-space effects. This extends the range of scales that can be reliably used in the fit, recovering more information without sacrificing model accuracy. Even without damping, the joint $P(k) + B$ analysis significantly improves cosmological constraints and breaks degeneracies (e.g. between $f$ and $\sigma_8$) compared to power-spectrum-only fits. The pipeline was tested and validated on DESI DR2 galaxy mocks.
+					A key innovation is the inclusion of a <strong>line-of-sight damping factor</strong> in both statistics, a phenomenological correction that models the suppression of clustering at small scales due to non-linear redshift-space effects. This extends the range of scales that can be reliably used in the fit, recovering more information without sacrificing model accuracy. Even without damping, the joint $P(k) + B$ analysis significantly improves cosmological constraints and breaks degeneracies (e.g. between $f$ and $\sigma_8$) compared to power-spectrum-only fits. The pipeline has been tested and validated on DESI DR2 galaxy mocks and has been chosen as the official pipeline for DESI DR2 FS Key Papers.
 					</p>
 
 					<div class="paper-cite">
@@ -71,7 +71,7 @@
 			</section>
 		</div>
 
-		<footer id="footer" class="wrapper alt">
+		<footer id="footer" class="wrapper style1-alt">
 			<div class="inner">
 				<ul class="menu">
 					<li>&copy; Prakhar Bansal. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
