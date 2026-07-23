@@ -4472,3 +4472,15 @@ input, select, textarea {
     margin: 0 0.5em;
     opacity: 0.4;
 }
+
+/* Contact form submit button */
+#three button[type="submit"] {
+    background-color: #3e6a94;
+    color: #ffffff !important;
+    border-color: #3e6a94;
+}
+
+#three button[type="submit"]:hover {
+    background-color: #2a5478;
+    border-color: #2a5478;
+}
