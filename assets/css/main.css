@@ -4061,6 +4061,20 @@ input, select, textarea {
     letter-spacing: -0.02em;
 }
 
+@media screen and (max-width: 736px) {
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+
+    .intro-text .tagline {
+        font-size: 1rem;
+    }
+
+    .intro-social {
+        gap: 1.2em;
+    }
+}
+
 .intro-text .tagline {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -4202,6 +4216,12 @@ input, select, textarea {
 #two .features section {
     width: 100% !important;
     margin: 0 !important;
+}
+
+@media screen and (max-width: 736px) {
+    #two .features {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 #four {
